@@ -22,6 +22,7 @@
               blurple: '#5865F2',
               green: '#57F287',
               yellow: '#FEE75C',
+              orange: '#FEE75C',
               fuchsia: '#EB459E',
               red: '#ED4245',
               dark: '#1e1f22',
@@ -39,7 +40,15 @@
       text-shadow: 0 0 30px rgba(255, 255, 255, 0.9), 0 0 60px rgba(88, 101, 242, 0.8);
     }
     .glow-box {
-      box-shadow: 0 0 35px -5px rgba(88, 101, 242, 0.3);
+      box-shadow: 0 0 35px -5px rgba(88, 101, 242, 0.25);
+    }
+    .glow-card {
+      transition: all 0.3s ease;
+    }
+    .glow-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px -10px rgba(88, 101, 242, 0.3);
+      border-color: rgba(88, 101, 242, 0.5);
     }
   </style>
 </head>
@@ -75,7 +84,7 @@
       </div>
       <!-- Clean PFP -->
       <div class="sm:col-span-4 flex justify-center">
-        <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl bg-black/90 border-2 border-slate-700 flex items-center justify-center p-4 shadow-2xl">
+        <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl bg-black/90 border-2 border-slate-700 flex items-center justify-center p-4 shadow-2xl hover:scale-105 transition-transform duration-300">
           <span class="font-black text-5xl sm:text-6xl text-white glow-tz font-mono">TZ</span>
         </div>
       </div>
@@ -107,48 +116,50 @@
       <div class="grid md:grid-cols-2 gap-4">
         
         <!-- 1. TwinkleAssistant -->
-        <div class="bg-discord-dark p-5 rounded-2xl border border-slate-800">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="text-2xl">🤪</span>
+        <div class="bg-discord-dark p-5 rounded-2xl border border-slate-800 glow-card">
+          <div class="flex items-center gap-3.5 mb-2">
+            <img src="twinkleassistant.png" alt="TwinkleAssistant Profile" class="w-12 h-12 rounded-full border-2 border-discord-green object-cover bg-slate-900 shadow-md">
             <div>
-              <h3 class="font-bold text-white">TwinkleAssistant</h3>
-              <span class="text-[10px] font-mono bg-discord-green/20 text-discord-green px-2 py-0.5 rounded border border-discord-green/30">Active Bot</span>
+              <h3 class="font-bold text-white text-base">TwinkleAssistant</h3>
+              <span class="text-[10px] font-mono bg-discord-green/20 text-discord-green px-2 py-0.5 rounded border border-discord-green/30 font-semibold">Active Bot</span>
             </div>
           </div>
           <p class="text-slate-300 text-xs sm:text-sm">Created with QPython using powerful API keys. Has a funny guy profile picture on the outside, but delivers high performance and strong capability behind the scenes.</p>
         </div>
 
         <!-- 2. Twinkletranslator -->
-        <div class="bg-discord-dark p-5 rounded-2xl border border-slate-800">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="text-2xl">🌐</span>
+        <div class="bg-discord-dark p-5 rounded-2xl border border-slate-800 glow-card">
+          <div class="flex items-center gap-3.5 mb-2">
+            <div class="w-12 h-12 rounded-full bg-slate-900 border-2 border-slate-700 flex items-center justify-center text-2xl shadow-md">🌐</div>
             <div>
-              <h3 class="font-bold text-white">Twinkletranslator</h3>
-              <span class="text-[10px] font-mono bg-discord-yellow/20 text-discord-yellow px-2 py-0.5 rounded border border-discord-yellow/30">Target Goal</span>
+              <h3 class="font-bold text-white text-base">Twinkletranslator</h3>
+              <span class="text-[10px] font-mono bg-discord-yellow/20 text-discord-yellow px-2 py-0.5 rounded border border-discord-yellow/30 font-semibold">Target Goal</span>
             </div>
           </div>
           <p class="text-slate-300 text-xs sm:text-sm">Target goal to build a real-time multi-language chat translation bot for global Discord communities.</p>
         </div>
 
         <!-- 3. TwinkleMusic -->
-        <div class="bg-discord-dark p-5 rounded-2xl border border-slate-800">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="text-2xl">🎵</span>
+        <div class="bg-discord-dark p-5 rounded-2xl border border-slate-800 glow-card">
+          <div class="flex items-center gap-3.5 mb-2">
+            <img src="twinklemusic.png" alt="TwinkleMusic Profile" class="w-12 h-12 rounded-full border-2 border-amber-500 object-cover bg-slate-900 shadow-md">
             <div>
-              <h3 class="font-bold text-white">TwinkleMusic</h3>
-              <span class="text-[10px] font-mono bg-discord-yellow/20 text-discord-yellow px-2 py-0.5 rounded border border-discord-yellow/30">Target Goal</span>
+              <h3 class="font-bold text-white text-base">TwinkleMusic</h3>
+              <span class="text-[10px] font-mono bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded border border-amber-500/40 font-semibold inline-flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span> Working On It
+              </span>
             </div>
           </div>
           <p class="text-slate-300 text-xs sm:text-sm">Target goal for high-quality voice channel audio playback, interactive queues, and custom music controls.</p>
         </div>
 
         <!-- 4. Twinkle AI System -->
-        <div class="bg-discord-dark p-5 rounded-2xl border border-slate-800">
-          <div class="flex items-center gap-3 mb-2">
-            <span class="text-2xl">🤖</span>
+        <div class="bg-discord-dark p-5 rounded-2xl border border-slate-800 glow-card">
+          <div class="flex items-center gap-3.5 mb-2">
+            <div class="w-12 h-12 rounded-full bg-slate-900 border-2 border-slate-700 flex items-center justify-center text-2xl shadow-md">🤖</div>
             <div>
-              <h3 class="font-bold text-white">Twinkle AI System</h3>
-              <span class="text-[10px] font-mono bg-discord-blurple/20 text-discord-blurple px-2 py-0.5 rounded border border-discord-blurple/30">Target Goal</span>
+              <h3 class="font-bold text-white text-base">Twinkle AI System</h3>
+              <span class="text-[10px] font-mono bg-discord-blurple/20 text-discord-blurple px-2 py-0.5 rounded border border-discord-blurple/30 font-semibold">Target Goal</span>
             </div>
           </div>
           <p class="text-slate-300 text-xs sm:text-sm">Target goal for an integrated AI system handling automated server support, intelligence responses, and smart moderation.</p>
@@ -168,7 +179,7 @@
 
       <!-- Top Best Friend: Ilifat23 -->
       <div class="max-w-md mx-auto">
-        <div class="bg-gradient-to-r from-amber-500/20 via-discord-dark to-amber-500/20 p-5 rounded-2xl border-2 border-amber-500/50 flex items-center justify-between shadow-lg shadow-amber-500/10">
+        <div class="bg-gradient-to-r from-amber-500/20 via-discord-dark to-amber-500/20 p-5 rounded-2xl border-2 border-amber-500/50 flex items-center justify-between shadow-lg shadow-amber-500/10 hover:border-amber-400 transition-colors">
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-full bg-amber-500/20 border border-amber-500/50 flex items-center justify-center text-xl">👑</div>
             <div>
@@ -182,7 +193,7 @@
 
       <!-- Friends Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
-        <div class="bg-discord-dark p-4 rounded-xl border border-slate-800 flex items-center gap-3">
+        <div class="bg-discord-dark p-4 rounded-xl border border-slate-800 flex items-center gap-3 hover:border-discord-blurple/50 transition-colors">
           <div class="w-9 h-9 rounded-full bg-discord-blurple/20 border border-discord-blurple/40 flex items-center justify-center font-bold text-discord-blurple text-sm">B</div>
           <div>
             <h4 class="font-bold text-white text-sm">Buke</h4>
@@ -190,7 +201,7 @@
           </div>
         </div>
 
-        <div class="bg-discord-dark p-4 rounded-xl border border-slate-800 flex items-center gap-3">
+        <div class="bg-discord-dark p-4 rounded-xl border border-slate-800 flex items-center gap-3 hover:border-discord-green/50 transition-colors">
           <div class="w-9 h-9 rounded-full bg-discord-green/20 border border-discord-green/40 flex items-center justify-center font-bold text-discord-green text-sm">🥓</div>
           <div>
             <h4 class="font-bold text-white text-sm">Bacon</h4>
@@ -198,7 +209,7 @@
           </div>
         </div>
 
-        <div class="bg-discord-dark p-4 rounded-xl border border-slate-800 flex items-center gap-3">
+        <div class="bg-discord-dark p-4 rounded-xl border border-slate-800 flex items-center gap-3 hover:border-discord-yellow/50 transition-colors">
           <div class="w-9 h-9 rounded-full bg-discord-yellow/20 border border-discord-yellow/40 flex items-center justify-center font-bold text-discord-yellow text-sm">⚡</div>
           <div>
             <h4 class="font-bold text-white text-sm">Noobie</h4>
@@ -216,5 +227,5 @@
   </footer>
 
 </body>
-  </html>
-    
+            </html>
+            
