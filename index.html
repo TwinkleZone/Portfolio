@@ -22,7 +22,6 @@
               blurple: '#5865F2',
               green: '#57F287',
               yellow: '#FEE75C',
-              orange: '#FEE75C',
               fuchsia: '#EB459E',
               red: '#ED4245',
               dark: '#1e1f22',
@@ -94,15 +93,15 @@
   <!-- Stats Grid -->
   <section class="py-10 bg-discord-dark/50 border-b border-white/5">
     <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-      <div class="bg-discord-dark p-5 rounded-2xl border border-slate-800 glow-box">
+      <div class="bg-discord-dark p-5 rounded-2xl border border-slate-800 glow-box hover:border-white/20 transition-colors">
         <div class="text-xs font-mono text-slate-400 uppercase">Servers Built</div>
         <div class="text-3xl sm:text-4xl font-extrabold text-white font-mono mt-1">4+</div>
       </div>
-      <div class="bg-discord-dark p-5 rounded-2xl border border-slate-800 glow-box">
+      <div class="bg-discord-dark p-5 rounded-2xl border border-slate-800 glow-box hover:border-discord-green/20 transition-colors">
         <div class="text-xs font-mono text-slate-400 uppercase">Servers Served</div>
         <div class="text-3xl sm:text-4xl font-extrabold text-discord-green font-mono mt-1">6+</div>
       </div>
-      <div class="bg-discord-dark p-5 rounded-2xl border border-slate-800 glow-box">
+      <div class="bg-discord-dark p-5 rounded-2xl border border-slate-800 glow-box hover:border-discord-yellow/20 transition-colors">
         <div class="text-xs font-mono text-slate-400 uppercase">Bot Commands</div>
         <div class="text-3xl sm:text-4xl font-extrabold text-discord-yellow font-mono mt-1">20+</div>
       </div>
@@ -118,19 +117,37 @@
         <!-- 1. TwinkleAssistant -->
         <div class="bg-discord-dark p-5 rounded-2xl border border-slate-800 glow-card">
           <div class="flex items-center gap-3.5 mb-2">
-            <img src="twinkleassistant.png" alt="TwinkleAssistant Profile" class="w-12 h-12 rounded-full border-2 border-discord-green object-cover bg-slate-900 shadow-md">
+            <!-- Embedded Character PFP -->
+            <div class="w-12 h-12 rounded-full border-2 border-discord-green bg-white shadow-md overflow-hidden flex-shrink-0 flex items-center justify-center">
+              <svg viewBox="0 0 100 100" class="w-full h-full">
+                <!-- Hair -->
+                <path d="M20,40 L30,15 L45,30 L55,10 L70,30 L85,15 L80,45 Z" fill="#2d1a10"/>
+                <!-- Face -->
+                <ellipse cx="50" cy="55" rx="30" ry="28" fill="#e0ab88"/>
+                <!-- Eyebrows -->
+                <path d="M30,45 Q40,40 48,46" stroke="#2d1a10" stroke-width="4" stroke-linecap="round" fill="none"/>
+                <path d="M52,46 Q60,40 70,45" stroke="#2d1a10" stroke-width="4" stroke-linecap="round" fill="none"/>
+                <!-- Eyes -->
+                <ellipse cx="38" cy="52" rx="4.5" ry="5.5" fill="#2d1a10"/>
+                <ellipse cx="62" cy="52" rx="4.5" ry="5.5" fill="#2d1a10"/>
+                <!-- Wide Smile -->
+                <path d="M32,66 Q50,80 68,66 Z" fill="#ffffff" stroke="#2d1a10" stroke-width="2"/>
+                <!-- Hoodie Neck -->
+                <path d="M22,83 Q50,92 78,83 L85,100 L15,100 Z" fill="#0c2328"/>
+              </svg>
+            </div>
             <div>
               <h3 class="font-bold text-white text-base">TwinkleAssistant</h3>
               <span class="text-[10px] font-mono bg-discord-green/20 text-discord-green px-2 py-0.5 rounded border border-discord-green/30 font-semibold">Active Bot</span>
             </div>
           </div>
-          <p class="text-slate-300 text-xs sm:text-sm">Created with QPython using powerful API keys. Has a funny guy profile picture on the outside, but delivers high performance and strong capability behind the scenes.</p>
+          <p class="text-slate-300 text-xs sm:text-sm">Originally created with QPython using powerful API keys, but now made with TypeScript. Has a funny guy profile picture on the outside, but delivers high performance and strong capability behind the scenes.</p>
         </div>
 
         <!-- 2. Twinkletranslator -->
         <div class="bg-discord-dark p-5 rounded-2xl border border-slate-800 glow-card">
           <div class="flex items-center gap-3.5 mb-2">
-            <div class="w-12 h-12 rounded-full bg-slate-900 border-2 border-slate-700 flex items-center justify-center text-2xl shadow-md">🌐</div>
+            <div class="w-12 h-12 rounded-full bg-slate-900 border-2 border-slate-700 flex items-center justify-center text-2xl shadow-md flex-shrink-0">🌐</div>
             <div>
               <h3 class="font-bold text-white text-base">Twinkletranslator</h3>
               <span class="text-[10px] font-mono bg-discord-yellow/20 text-discord-yellow px-2 py-0.5 rounded border border-discord-yellow/30 font-semibold">Target Goal</span>
@@ -142,7 +159,13 @@
         <!-- 3. TwinkleMusic -->
         <div class="bg-discord-dark p-5 rounded-2xl border border-slate-800 glow-card">
           <div class="flex items-center gap-3.5 mb-2">
-            <img src="twinklemusic.png" alt="TwinkleMusic Profile" class="w-12 h-12 rounded-full border-2 border-amber-500 object-cover bg-slate-900 shadow-md">
+            <!-- Embedded TM Logo PFP -->
+            <div class="w-12 h-12 rounded-full border-2 border-amber-500 bg-black shadow-md overflow-hidden flex-shrink-0 flex items-center justify-center p-0.5">
+              <svg viewBox="0 0 100 100" class="w-full h-full rounded-full">
+                <circle cx="50" cy="50" r="48" fill="#000000"/>
+                <text x="50" y="66" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="44" fill="#ffffff" text-anchor="middle" letter-spacing="-1">TM</text>
+              </svg>
+            </div>
             <div>
               <h3 class="font-bold text-white text-base">TwinkleMusic</h3>
               <span class="text-[10px] font-mono bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded border border-amber-500/40 font-semibold inline-flex items-center gap-1.5">
@@ -150,13 +173,13 @@
               </span>
             </div>
           </div>
-          <p class="text-slate-300 text-xs sm:text-sm">Target goal for high-quality voice channel audio playback, interactive queues, and custom music controls.</p>
+          <p class="text-slate-300 text-xs sm:text-sm">Target goal for high-quality voice channel audio playback, interactive queues, and custom music controls. Now rewrote and fully built with TypeScript.</p>
         </div>
 
         <!-- 4. Twinkle AI System -->
         <div class="bg-discord-dark p-5 rounded-2xl border border-slate-800 glow-card">
           <div class="flex items-center gap-3.5 mb-2">
-            <div class="w-12 h-12 rounded-full bg-slate-900 border-2 border-slate-700 flex items-center justify-center text-2xl shadow-md">🤖</div>
+            <div class="w-12 h-12 rounded-full bg-slate-900 border-2 border-slate-700 flex items-center justify-center text-2xl shadow-md flex-shrink-0">🤖</div>
             <div>
               <h3 class="font-bold text-white text-base">Twinkle AI System</h3>
               <span class="text-[10px] font-mono bg-discord-blurple/20 text-discord-blurple px-2 py-0.5 rounded border border-discord-blurple/30 font-semibold">Target Goal</span>
@@ -181,7 +204,12 @@
       <div class="max-w-md mx-auto">
         <div class="bg-gradient-to-r from-amber-500/20 via-discord-dark to-amber-500/20 p-5 rounded-2xl border-2 border-amber-500/50 flex items-center justify-between shadow-lg shadow-amber-500/10 hover:border-amber-400 transition-colors">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-amber-500/20 border border-amber-500/50 flex items-center justify-center text-xl">👑</div>
+            <!-- Cropped Photo for Top Friend -->
+            <div class="relative flex-shrink-0">
+              <div class="w-12 h-12 rounded-full border border-amber-500/50 shadow-inner flex items-center justify-center" style="background-image: url('ilifat23_pfp.png'); background-size: cover; background-position: center;"></div>
+              <!-- Small badge -->
+              <div class="absolute -bottom-1.5 -right-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-700 flex items-center justify-center text-xs">👑</div>
+            </div>
             <div>
               <h3 class="font-extrabold text-white text-base">Ilifat23</h3>
               <p class="text-[10px] text-amber-400 font-mono">Top Best Friend</p>
@@ -191,31 +219,42 @@
         </div>
       </div>
 
-      <!-- Friends Grid -->
+      <!-- Friends Grid with Cropped Photos -->
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+        
+        <!-- Buke Profile -->
         <div class="bg-discord-dark p-4 rounded-xl border border-slate-800 flex items-center gap-3 hover:border-discord-blurple/50 transition-colors">
-          <div class="w-9 h-9 rounded-full bg-discord-blurple/20 border border-discord-blurple/40 flex items-center justify-center font-bold text-discord-blurple text-sm">B</div>
+          <div class="flex-shrink-0">
+            <div class="w-10 h-10 rounded-full border border-discord-blurple/40 shadow-inner flex items-center justify-center" style="background-image: url('buke_pfp.png'); background-size: cover; background-position: center;"></div>
+          </div>
           <div>
             <h4 class="font-bold text-white text-sm">Buke</h4>
             <span class="text-[10px] text-slate-400">Best Friend</span>
           </div>
         </div>
 
+        <!-- Bacon Profile -->
         <div class="bg-discord-dark p-4 rounded-xl border border-slate-800 flex items-center gap-3 hover:border-discord-green/50 transition-colors">
-          <div class="w-9 h-9 rounded-full bg-discord-green/20 border border-discord-green/40 flex items-center justify-center font-bold text-discord-green text-sm">🥓</div>
+          <div class="flex-shrink-0">
+            <div class="w-10 h-10 rounded-full border border-discord-green/40 shadow-inner flex items-center justify-center" style="background-image: url('bacon_pfp.png'); background-size: cover; background-position: center;"></div>
+          </div>
           <div>
             <h4 class="font-bold text-white text-sm">Bacon</h4>
             <span class="text-[10px] text-slate-400">Best Friend</span>
           </div>
         </div>
 
+        <!-- Noobie Profile -->
         <div class="bg-discord-dark p-4 rounded-xl border border-slate-800 flex items-center gap-3 hover:border-discord-yellow/50 transition-colors">
-          <div class="w-9 h-9 rounded-full bg-discord-yellow/20 border border-discord-yellow/40 flex items-center justify-center font-bold text-discord-yellow text-sm">⚡</div>
+          <div class="flex-shrink-0">
+            <div class="w-10 h-10 rounded-full border border-discord-yellow/40 shadow-inner flex items-center justify-center" style="background-image: url('noobie_pfp.png'); background-size: cover; background-position: center;"></div>
+          </div>
           <div>
             <h4 class="font-bold text-white text-sm">Noobie</h4>
             <span class="text-[10px] text-slate-400">Best Friend</span>
           </div>
         </div>
+        
       </div>
 
     </div>
@@ -227,5 +266,5 @@
   </footer>
 
 </body>
-            </html>
-            
+</html>
+
